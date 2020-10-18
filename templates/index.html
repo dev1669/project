@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+
+<body>
+
+
+<div class="w3-content w3-section centre" style="max-width:500px">
+  {% for d in datas %}
+  <h2 class="w3-center">{{d.text}}</h2>
+  <img src="{{MEDIA_URL}}{{d.photo.url}}" style="width:100%">
+{% endfor %}
+</div>
+
+</body>
+</html>
